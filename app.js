@@ -33,3 +33,12 @@ mongoose.connection.on('open', (err, result)=>{
     else 
         console.log('Database connection successful!!!')
 })
+
+mongoose.connection.on('error', (err, res)=>{
+    if(err){
+        console.log('Error')
+    }
+    else{
+        console.log('Success')
+    }
+})
